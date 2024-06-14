@@ -1,2 +1,7 @@
 ghcr.io/home-assistant/amd64-hassio-supervisor:2024.06.0 registry.cn-hangzhou.aliyuncs.com/smarthomefans/amd64-hassio-supervisor:2024.06.0
 ghcr.io/home-assistant/amd64-hassio-cli:2024.05.0 registry.cn-hangzhou.aliyuncs.com/smarthomefans/amd64-hassio-cli:2024.05.0
+ghcr.io/home-assistant/amd64-homeassistant:2024.6.2 registry.cn-hangzhou.aliyuncs.com/smarthomefans/amd64-homeassistant:2024.6.2
+ghcr.io/home-assistant/amd64-hassio-observer:2023.06.0 registry.cn-hangzhou.aliyuncs.com/smarthomefans/amd64-hassio-observer:2023.06.0
+ghcr.io/home-assistant/amd64-hassio-audio:2023.12.0 registry.cn-hangzhou.aliyuncs.com/smarthomefans/amd64-hassio-audio:2023.12.0
+ghcr.io/home-assistant/amd64-hassio-dns:2024.04.0 registry.cn-hangzhou.aliyuncs.com/smarthomefans/amd64-hassio-dns:2024.04.0
+ghcr.io/home-assistant/amd64-hassio-multicast:2024.03.0 registry.cn-hangzhou.aliyuncs.com/smarthomefans/amd64-hassio-multicast:2024.03.0
