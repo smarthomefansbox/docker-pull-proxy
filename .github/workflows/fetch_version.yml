@@ -2,7 +2,7 @@ name: Fetch Supervisor Version
 
 on:
   schedule:
-    - cron: '*/5 * * * *' # 每五分钟运行一次
+    - cron: '*/1 * * * *' # 每五分钟运行一次
   workflow_dispatch: # 允许手动触发
 
 jobs:
@@ -14,18 +14,21 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Install jq
-      run: sudo apt-get install -y jq
+      run: sudo apt-get update && sudo apt-get install -y jq
 
     - name: Fetch supervisor version
       id: fetch_supervisor_version
       run: |
         curl -s https://version.home-assistant.io/stable.json -o stable.json
+        cat stable.json # 输出内容以便调试
         SUPERVISOR_VERSION=$(jq -r '.supervisor' stable.json)
+        echo "Fetched supervisor version: $SUPERVISOR_VERSION"
         echo "SUPERVISOR_VERSION=$SUPERVISOR_VERSION" >> $GITHUB_ENV
 
     - name: Update test.txt
       run: |
         echo "$SUPERVISOR_VERSION" > test.txt
+        cat test.txt # 输出内容以便调试
 
     - name: Commit changes
       run: |
